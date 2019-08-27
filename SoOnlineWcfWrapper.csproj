@@ -1,0 +1,279 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C92C0D94-1DC3-4E8C-97EB-30D6CFA8ADD0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoOnlineWcfWrapper</RootNamespace>
+    <AssemblyName>SoOnlineWcfWrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>53130</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words, Version=15.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CentralServices.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\CentralServices.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.12.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\HtmlAgilityPack.1.11.12\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Ical.Net, Version=4.1.8.0, Culture=neutral, PublicKeyToken=65c0446cd019ea53, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\Ical.Net.4.1.11\lib\net46\Ical.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.1.271, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\Microsoft.IdentityModel.JsonWebTokens.5.5.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\Microsoft.IdentityModel.Logging.5.5.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\MimeKit.2.2.0\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime, Version=2.4.6.0, Culture=neutral, PublicKeyToken=4226afe0d9b296d1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\NodaTime.2.4.6\lib\net45\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="SoBatchProcessing, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SoBatchProcessing.dll</HintPath>
+    </Reference>
+    <Reference Include="SOCore, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\SOCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SoDataBase, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\SoDataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SoLicense, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\SoLicense.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.CD.DSL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.ContinuousDatabase.8.5.7121.17\lib\net471\SuperOffice.CD.DSL.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.CD.DSL.Database, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.ContinuousDatabase.8.5.7121.17\lib\net471\SuperOffice.CD.DSL.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.CD.DSL.Implementation, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.ContinuousDatabase.8.5.7121.17\lib\net471\SuperOffice.CD.DSL.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\SuperOffice.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.DCF, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.DCF.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.DCF.Services, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.DCF.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.DCF.Services.Implementation, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.DCF.Services.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.FeatureToggles, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\SuperOffice.FeatureToggles.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Messaging, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Messaging.Services, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Messaging.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Messaging.Services.Implementation, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Messaging.Services.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Mime, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\SuperOffice.Mime.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Online.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.Crm.Online.Core.4.0.6985.1226\lib\net45\SuperOffice.Online.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Plugins, Version=2.0.3.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Core.8.5.7121.17\lib\net471\SuperOffice.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Services, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Services.Implementation, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Services.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Services.Versioned, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Services.Versioned.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Services.Versioned.Contract, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Services.Versioned.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Services.Wcf, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Services.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.Services.WcfProxy, Version=8.5.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.NetServer.Services.8.5.7121.17\lib\net471\SuperOffice.Services.WcfProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.SuperID.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.Crm.Online.Core.4.0.6985.1226\lib\net45\SuperOffice.SuperID.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperOffice.SuperID.Contracts, Version=4.0.0.0, Culture=neutral, PublicKeyToken=bdda2d694ae22a86, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\SuperOffice.Crm.Online.Core.4.0.6985.1226\lib\net45\SuperOffice.SuperID.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\System.IdentityModel.Tokens.Jwt.4.0.2.206221351\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Edelmann_Phone_Messages\packages\System.Reflection.TypeExtensions.4.5.1\lib\net461\System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppointmentService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppointmentService.svc.cs">
+      <DependentUpon>AppointmentService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IAppointmentService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CommSoOnlineWcfProxy - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\CommSoOnlineWcfProxy - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Edelmann_Phone_Messages\EdelmannPhoneMessage\EdelmannPhoneMessage.Core\EdelmannPhoneMessage.Core.csproj">
+      <Project>{79514F54-113A-4FD8-96DC-21D01E435F48}</Project>
+      <Name>EdelmannPhoneMessage.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SuperOffice.DevNet.Online.Provisioning\SuperOffice.DevNet.Online.Provisioning.csproj">
+      <Project>{bc00b256-9ceb-4228-ba73-557e2ef65304}</Project>
+      <Name>SuperOffice.DevNet.Online.Provisioning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SuperOffice.DevNet.Online.SystemUser.PartnerDBLibrary\SuperOffice.DevNet.Online.SystemUser.PartnerDBLibrary.csproj">
+      <Project>{980d63c9-8d77-4c5e-9cd8-eac24d30c618}</Project>
+      <Name>SuperOffice.DevNet.Online.SystemUser.PartnerDBLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53130</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>https://localhost:44300/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

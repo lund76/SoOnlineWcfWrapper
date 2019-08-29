@@ -46,13 +46,14 @@ namespace SoOnlineWcfWrapper
                 ConfigFile.WebServices.RemoteBaseURL = netserverUrl;
                 using (SoSession.Authenticate(new SoCredentials(ticket)))
                 using (var appAgent = new AppointmentAgent())
-                //using (new AssociateAgent())
+                using (var contAgent = new ContactAgent())
                 using (var personAgent = new PersonAgent())
                 {
                
                     var appEnts = new List<AppointmentInfo>();
                     AppointmentInfo appInfo;
                     AppointmentEntity appEntity;
+                    ContactEntity contEnt;
                     do
                     {
                         appEntity = appAgent.GetAppointmentEntity(appointmentId);
@@ -60,15 +61,19 @@ namespace SoOnlineWcfWrapper
             
                         var associatePerson = personAgent.GetPersonEntity(appEntity.Associate.PersonId);
                         var appointmentPerson = personAgent.GetPersonEntity(appEntity.Person.PersonId);
+                        contEnt = contAgent.GetContactEntity(appointmentPerson.Contact.ContactId);
 
                         appInfo = new AppointmentInfo
                         {
                             AppointmentId = appEntity.AppointmentId,
+                            AppointmentType = appEntity.Task.Value,
                             EmailReceiver = appointmentPerson.Emails.FirstOrDefault()?.Value,
                             MessageDescription = appEntity.Description,
                             Receptionist = associatePerson.FullName,
                             RecepTitle = associatePerson.Title,
                             SmsPhoneNumber = appointmentPerson.MobilePhones.FirstOrDefault()?.Value,
+                            CustomerKey = ResolveVariableInfo(contEnt,
+                                infoWishList.FirstOrDefault(k => k.Key == "CustomerKey").Value),
                             CustWantsCallBack = ResolveVariableInfo(appEntity,
                                 infoWishList.FirstOrDefault(k => k.Key == "CustWantsCallBack").Value),
                             SendSms = ResolveVariableInfo(appointmentPerson,
@@ -118,6 +123,12 @@ namespace SoOnlineWcfWrapper
                         var a = appEnt.UserDefinedFields.FirstOrDefault(k => k.Key == val.FieldKey);
                         result = a.Value;
                       break;
+                    case "COMPANYDEFAULT":
+                    if (!(entity is ContactEntity contEnt))
+                        throw new Exception("Entity type not correctly resolved");
+                    var c = contEnt.GetType().GetProperty(val.FieldKey)?.GetValue(entity, null);
+                    if (c != null) result = c.ToString();
+                    break;
                 }
             return result;
         }
@@ -189,6 +200,8 @@ namespace SoOnlineWcfWrapper
         [DataMember]
         public int AppointmentId { get; set; }
         [DataMember]
+        public string CustomerKey { get; set; }
+        [DataMember]
         public string MessageDescription { get; set; }
         [DataMember]
         public string EmailReceiver { get; set; }
@@ -212,6 +225,8 @@ namespace SoOnlineWcfWrapper
         public string CustWantsCallBack { get; set; }
         [DataMember]
         public string SmsPhoneNumber { get; set; }
+        [DataMember]
+        public string AppointmentType { get; set; }
     }
    
 }
